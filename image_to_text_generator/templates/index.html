@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Text Extractor</title>
+</head>
+<body>
+    <h1>Extract Text From Image</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit">Upload and Extract Text</button>
+    </form>
+
+    {% if extracted_text %}
+        <h2>Extracted Text:</h2>
+        <p>{{ extracted_text }}</p>
+        <img src="{{ image_path }}" alt="Uploaded Image">
+    {% endif %}
+</body>
+</html>
